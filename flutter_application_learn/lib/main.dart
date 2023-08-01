@@ -1,27 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_learn/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-          backgroundColor: const Color.fromARGB(255, 205, 239, 255),
-          appBar: AppBar(
-            title: Text('I love Farisah'),
-          ),
-          body: Text('Cinta hati saya ialah Farisah'),
-          bottomNavigationBar: BottomNavigationBar(items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: 'Settings')
-          ]),
-        ));
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        useMaterial3: true,
+      ),
+      home: HomePage(),
+    );
   }
 }
