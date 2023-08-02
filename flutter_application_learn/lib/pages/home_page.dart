@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_learn/core/constants.dart';
 import 'package:flutter_application_learn/widget/card_widget.dart';
+import 'package:flutter_application_learn/widget_tree.dart';
 
 import '../class/item_class.dart';
 
@@ -18,10 +19,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Terapi'),
-        shadowColor: Colors.blue,
+        title: Text('Terapi'),
+        shadowColor: Colors.lightBlue,
       ),
-
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
               box: ItemClass(
                 title: 'Main Light',
                 imagePath: 'images/light.png',
-                description : lightString,
+                description: lightString,
               ),
             ),
             const SizedBox(height: kDouble10),
@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
                     box: ItemClass(
                       title: 'Child Dark',
                       imagePath: 'images/dark.png',
-                      description : darkString,
+                      description: darkString,
                     ),
                   ),
                 ),
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                     box: ItemClass(
                       title: 'Child Light',
                       imagePath: 'images/light.png',
-                       description : lightString,
+                      description: lightString,
                     ),
                   ),
                 ),
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                     box: ItemClass(
                       title: 'Child Dark',
                       imagePath: 'images/dark.png',
-                      description : darkString,
+                      description: darkString,
                     ),
                   ),
                 ),
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                     box: ItemClass(
                       title: 'Child Light',
                       imagePath: 'images/light.png',
-                       description : lightString,
+                      description: lightString,
                     ),
                   ),
                 ),
@@ -78,7 +78,6 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.all(8.0),
                 height: 600,
                 child: Image.asset('images/dark.png'),
-                 
               ),
             ),
             Center(
